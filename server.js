@@ -7,8 +7,6 @@ const fs = require('fs');
 const app = express();
 
 
-//port variable
-
 const filedata = fs.readFileSync('./db/db.json', 'utf8');
 const notes = JSON.parse(filedata);
 
@@ -63,23 +61,5 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
 
-/*Post/api/notes
 
-//Unique IDs
-
-//npm install uuid 
-
-//import uuid from 'uuid';
-
-//const { v4: uuidv4 } = require('uuid');
-
-//import { v4 as uuidv4 } from 'uuid';
-
-//function createNewNote (body, notesArray) {
-    //const note = body;
-    //notesArray.push(note);
-    //fs.writeFileSync(
-        //path.join(__dirname, './db/db.json'),
-        //JSON.stringify({ notes: notesArray }, null, 2)
-    //);*/
 
